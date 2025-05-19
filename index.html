@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Registration form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id = "form-div" style = "width: 50%; margin-left: auto; margin-right: auto;font-family: 'Arial', sans-serif; line-height: 1.5; letter-spacing: 1px; font-style: italic;">
+		<h1>Registration form</h1>
+		<form id = "form">
+			<label for="name">Full name</label>
+			<input type="text" id="name" placeholder="your fullname.."><br><br>
+			<label>Gender</label><br>
+			<label for="male"></label><input type="radio" id="male" name="gender" value="male">Male<br>
+			<label for="female"></label><input type="radio" id="female" name="gender" value="female">Female<br>
+			<label for="other"></label><input type="radio" id="other" name="gender" value="other">Other<br>
+			<label for="anon"></label><input type="radio" id="anon" name="gender" value="I don't want to say">I don't want to say<br><br>
+
+			<label for="birthdate" >Birthdate</label><br>
+			<input type="date" id="birthdate"><br><br>
+
+			<label for="email" >Email</label>
+			<input type="email" id="email" placeholder="email.."><br><br>
+
+			<label for="phone">Phone number</label>
+			<input type="tel" id="phone" placeholder="phone number.."><br><br>
+
+			<label for="color">Theme</label>
+			<input type="color" id="color"><br><br>
+
+			<label for="country">Country</label>
+			<input type="text" id="country" placeholder="country.."><br><br>
+
+			<label for="city">City</label>
+			<input type="text" id="city" placeholder="city.."><br><br>
+
+			<label for="comment">Comment</label><br>
+			<textarea id="comment" 	placeholder="your comment.."></textarea><br><br>
+
+			<button id ="submit-button" type="submit">Submit</button>
+
+<!--			<button type="reset">Reset</button>-->
+
+			<br><br>
+		</form>
+
+	</div>
+
+	<script>
+		document.getElementById("form").addEventListener("submit", function(event){
+            event.preventDefault();
+			const theme = document.getElementById("color").value
+			document.getElementById("form-div").style.color = theme;
+        });
+	</script>
+</body>
+
+</html>
