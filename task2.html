@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Professor's card</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div id = "form-div" style = "width: 50%; font-family: 'Arial', sans-serif; line-height: 1; letter-spacing: 0.8px; font-style: italic;">
+    <h1 style = "font-size: xxx-large">Card</h1>
+    <picture>
+        <img width="400rem" src="https://www.ustf.ac.ae/images/files/colleges/faculty_member_profiles/74473254752959211545330551Picture1_3-200x200.jpg"
+             alt="photo of professor">
+
+    </picture>
+    <p id = "name" style ="font-size: xxx-large"></p>
+
+    <details style = "font-size: xx-large">
+        <summary>More info</summary>
+        <div class="more-info">
+            <p id = "email"><strong></strong> </p>
+            <p id = "phone"><strong></strong></p>
+            <p id = "address"><strong></strong></p>
+        </div>
+        <details>
+            <summary>Quote of day</summary>
+            <blockquote id = "quote"></blockquote>
+        </details>
+    </details>
+</div>
+
+<script>
+    const professor = {
+        "name": "Professor Mark",
+        "email": "professor@ukma.edu.ua",
+        "phone": "+38 (056) 452 34 21",
+        "country": "Ukraine",
+        "city": "Kyiv",
+        "quote": "\"The future depends on what you do today.\""
+    }
+    document.getElementById("name").textContent = professor.name;
+    document.getElementById("email").textContent = "Email: " + professor.email;
+    document.getElementById("phone").textContent = "Phone number: " + professor.phone;
+    document.getElementById("address").textContent = professor.country + ", " + professor.city;
+    document.getElementById("quote").textContent = professor.quote;
+</script>
+</body>
+
+</html>

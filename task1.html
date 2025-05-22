@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id = "form-div" style = "width: 50%; margin-left: auto; margin-right: auto;font-family: 'Arial', sans-serif; line-height: 1.5; letter-spacing: 1px; font-style: italic;">
+	<main id = "form-div" style = "width: 50%; margin-left: auto; margin-right: auto;font-family: 'Arial', sans-serif; line-height: 1.5; letter-spacing: 1px; font-style: italic;">
 		<h1>Registration form</h1>
-		<form id = "form">
+		<form id = "form" method = "post">
 			<label for="name">Full name</label>
 			<input type="text" id="name" placeholder="your fullname.."><br><br>
 			<label>Gender</label><br>
@@ -40,18 +40,17 @@
 
 			<button id ="submit-button" type="submit">Submit</button>
 
-<!--			<button type="reset">Reset</button>-->
+			<button type="reset">Reset</button>
 
 			<br><br>
 		</form>
 
-	</div>
+	</main>
 
 	<script>
 		document.getElementById("form").addEventListener("submit", function(event){
             event.preventDefault();
-			const theme = document.getElementById("color").value
-			document.getElementById("form-div").style.color = theme;
+			document.getElementById("form-div").style.color = document.getElementById("color").value;
         });
 	</script>
 </body>
